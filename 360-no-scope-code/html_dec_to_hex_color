@@ -1,0 +1,10 @@
+
+def dec_to_hex(int1, int2, int3):
+    hex1 = hex(int1)[2:].__str__()
+    hex2 = hex(int2)[2:].__str__()
+    hex3 = hex(int3)[2:].__str__()
+    print("#" + hex1 + hex2 + hex3)
+
+
+dec_to_hex(255, 99, 71)
+
