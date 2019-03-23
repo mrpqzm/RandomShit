@@ -1,0 +1,21 @@
+def leaps(y1=2019, y2=2019):
+    count = 0
+    for y in range(y1, y2+1):
+        if (y % 4 == 0 and y % 100 != 0) or (y % 900 in (200, 600)):
+            count += 1
+    return count
+
+print(leaps(1234,5678))
+print(leaps(123456, 7891011))
+
+
+def num_between(num1, num2, div, offset):
+ return ((num2-offset-1)//div) - ((num1-offset-1)//div)
+
+
+def leaps_math(y1=2019, y2=2019):
+    return (num_between(y1, y2, 4, 0)) - (num_between(y1, y2, 100, 0)) + (num_between(y1, y2, 900, 200)) + (num_between(y1, y2, 900, 600))
+
+print(leaps_math(1234,5678))
+print(leaps_math(123456, 7891011))
+print(leaps_math(123456789101112, 1314151617181920))
